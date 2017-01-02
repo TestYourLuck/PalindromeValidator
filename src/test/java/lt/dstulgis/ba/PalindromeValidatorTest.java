@@ -30,9 +30,9 @@ public class PalindromeValidatorTest {
 	
 	@Test
 	public void shouldFailValidation() {
-		String badNumber = "12321";
-		String badWord = "asdfdsa";
-		String badLettersAndNumbers = "12asa21";
+		String badNumber = "123";
+		String badWord = "asdf";
+		String badLettersAndNumbers = "12as";
 		String badText = "This is not palindrome. Is it?";
 		
 		assertFalse("Should not accept bad numbers as palindrome.", palindromeValidator.validate(badNumber));

@@ -1,18 +1,21 @@
 package lt.dstulgis.ba;
 
 /**
- * Validator class used to check if letters and numbers in text are a palindrome.
+ * Validator class for checking if given text is palindrome.
  * 
  * @author dstulgis
  */
 public class PalindromeValidator {
 
 	/**
+	 * Validates given text if it is a palindrome ignoring non-alphanumeric characters.
 	 * 
-	 * @param text
-	 * @return
+	 * @param text to be validated
+	 * @return {@code true} or {@code false} if validation passes or fails
 	 */
 	public boolean validate(String text) {
-		return false;
+		String plainText = text.replaceAll("\\W", "");
+		String reverseText = new StringBuilder(plainText).reverse().toString();
+		return plainText.equalsIgnoreCase(reverseText);
 	}
 }
